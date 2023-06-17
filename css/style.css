@@ -1,0 +1,22 @@
+@import "/css/variables.css";
+
+.bg-div{
+    background-image: url("/images/BG.jpg");
+}
+
+#head-contents{
+    margin: 12rem 8rem;
+    padding-bottom: 12rem;
+}
+
+#form-email{
+    margin-bottom: 12rem;
+
+}
+
+#email-box{
+    flex: 4;
+}
+#start-btn{
+    flex: 2;
+}
