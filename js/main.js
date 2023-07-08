@@ -28,3 +28,24 @@ function onHover(){
 btn.addEventListener("click",printValue);
 img.addEventListener("mouseover", onHover);
 img.addEventListener("mouseout", mouseout);
+
+function loadData(){
+    const div = document.createElement("div");
+    const lbl = document.createElement("label");
+    const p = document.createElement("p");
+    const p2 = document.createElement("p"); //
+
+    fetch('https://jsonplaceholder.typicode.com/todos/1')
+      .then(response => response.json())
+      .then((json)=>{
+        p.innerText=json["title"];
+        p2.innerText= json['completed'];///
+        lbl.innerText= "Title of work";
+        div.appendChild(lbl);
+        div.appendChild(p);
+        div.appendChild(p2);//
+        section.appendChild(div);
+      })
+}
+
+loadData();
